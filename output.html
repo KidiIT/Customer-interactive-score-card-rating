@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head<!>
+  <title>Interactive Project Document</title>
+  <style>
+    input[type="radio"] {
+      display: none;
+    }
+
+    .rating{
+      color: yellow;
+      width: 200px;
+      height: 20px;
+    }
+
+    .mad {
+      display: flex;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .mad>div{
+      min-width: 100%;
+    }
+
+    .slider {
+      animation: slide 1s forwards ;
+    }
+
+    @keyframes slide {
+      from{
+        
+      }to{
+        transform: translateX(-100%);
+      }
+    }
+
+    .slider2 {
+      animation: slide2 1s forwards ;
+    }
+
+    .slider3 {
+      animation: slide3 1s forwards ;
+
+    }
+
+    @keyframes slide2 {
+      from{
+        
+      }to{
+        transform: translateX(100%);
+      }
+    }
+
+    @keyframes slide3 {
+      from{
+        transform: translateX(-100%);
+      }to{
+        transform: translateX(0%);
+      }
+    }
+
+    
+    
+    body {
+      background-color: rgb(26, 26, 26);
+      color: white;
+      font-size: 19px;
+      font-family: sans-serif;
+    }
+
+    .mad{
+      background-color: rgb(48, 48, 48);
+      padding: 50px;
+    }
+
+    .text {
+      margin: 40px 90px;
+    }
+
+    .div1 button,.div2 button {
+      font-size: 19px;
+      margin: 20px 0;
+      padding: 15px 40px;
+      background-color: orange;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      box-shadow: 1px 2px 2px;
+      cursor: pointer;
+    }
+
+    span{
+      cursor: pointer;
+    }
+
+    form {
+      display: flex;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .mad{
+      box-shadow: 2px 2px 4px 2px rgb(134, 134, 134);
+    }
+    
+  </style>
+</head>
+
+<body>
+  <form name="interaction_form">
+    <center>
+      <div style=" height:320px; width:66%;" class="mad">
+        <div class="div1">
+          <h1 id="head">How did we do ?</h1>
+          <diV>
+            <p data-valu-holder class="text">
+              please let us know how we did with your support request.
+              All feedback is appreciated to help us improve our offering!
+            </p>
+            
+            <div>
+            
+              <span for="rate1" data-number data-star="1">&star;</span>
+              <span for="rate2"  data-number  data-star="2">&star;</span>
+              <span for="rate3"  data-number  data-star="3">&star;</span>
+              <span for="rate4"  data-number  data-star="4">&star;</span>
+              <span for="rate5"  data-number  data-star="5">&star;</span>
+            </div>
+          </diV>
+          <div>
+            <button onclick="next()">submit</button>
+          </div>
+        </div>
+        <div class="div2">
+          <h1 id="head2">How did we do ?</h1>
+          <diV>
+            <p data-valu-holder>
+              you selected <span data-rateNumber>
+              
+              </span>
+            </p>
+          </diV>
+          <div>
+            <button onclick="previous()">previous</button>
+          </div>
+        </div>
+        <span class="all" imgsrc="IMG_E0767.JPG" alt=""></span>
+    </center>
+  </form>
+  <script src="out.js"></script>
+</body>
+
+</html>
